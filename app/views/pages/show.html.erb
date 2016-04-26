@@ -1,7 +1,17 @@
 <div class="container" id="content-wrap">
 <div  id="content">
 
+<div class="show-cover" style="background-image:url(<%= @houses.image.url %>);">
 <p>
+	<div class="row" id="caption">
+	<div class="col-sm-2">
+		
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @houses.image.thumb.url %>
+</p>
+	</div>
+	<div class="col-sm-10">
   <strong>Name:</strong>
   <%= @houses.name %>
 </p>
@@ -10,16 +20,16 @@
   <strong>Description:</strong>
   <%= @houses.description %>
 </p>
+</div>
+
+</div>
+</div>
 
 <p>
-  <strong>Image:</strong>
-  <%= image_tag @houses.image.thumb.url %>
-</p>
 
-<p>
 	<strong>Gallery:</strong><br>
 	<% @houses.gallery.each do |p| %>
-  <%= image_tag p.url %>
+  <%= image_tag p.cover.url %>
 <% end %>
 </p>
 
