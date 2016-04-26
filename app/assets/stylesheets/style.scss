@@ -1,0 +1,230 @@
+
+/*BODY*/
+body{
+background-image: url("/img/swirl_pattern.png");
+background-repeat: repeat;
+overflow-x:hidden;
+}
+/*BODY END*/
+
+/*ZOOMGROUND*/
+@-webkit-keyframes cssAnimation {
+from { -webkit-transform: scale(1); }
+10%	{ -webkit-transform: scale(1);}
+to { -webkit-transform: scale(1.5);}
+}
+@-moz-keyframes cssAnimation {
+from { -moz-transform:scale(1); }
+10%	{ -moz-transform: scale(1);}
+to { -moz-transform: scale(1.5); }
+}
+@-o-keyframes cssAnimation {
+from { -o-transform:scale(1); }
+10%	{ -o-transform: scale(1);}
+to { -o-transform: scale(1.5); }
+}
+
+.zoomground-wrap {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+
+    /*custom border bottom*/
+     border-bottom: 1px dashed #ddd;
+}
+
+.zoomground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-animation: cssAnimation 20s ease;
+	-moz-animation: cssAnimation 20s ease;
+	-o-animation: cssAnimation 20s ease;
+	-webkit-animation-fill-mode: forwards;
+    background-image: url("/img/bg.jpg");
+    -webkit-filter: blur(5px); -moz-filter: blur(5px); -o-filter: blur(5px); -ms-filter: blur(5px); filter: blur(5px);
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    z-index: -1;
+}
+/*ZOOMGROUND END*/
+
+/*ZOOMGROUND LOGO*/
+
+.zoomground-logo-wrap{
+	margin-top: 20vh;
+	margin-bottom: 25vh;
+	margin-left: 25vw;
+	margin-right: 25vw;
+	max-height: 600px;
+	max-width: 1050px;
+}
+.zoomground-logo{
+	color:white;
+	text-align: center;
+	text-shadow: 20px 20px 40px #000000;
+}
+
+#opening-button{
+	border-radius:50%;
+	padding:0.5em 0.2em 0.5em 0.2em;
+	color: #f07746;
+	font-family: "MarketingScript";
+	font-size:3.5em;
+	background-color: rgba(0,0,0,0.0);
+	border: 2px solid #f07746;
+	margin-top: 3vh;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	transition: all 0.7s ease 0s;
+	& a{
+	color: #f07746;
+	text-decoration: none;
+	}
+	&:hover{
+	box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+	background-color: rgba(255,255,255,0.8);
+	}
+}
+/*ZOOMGROUND LOGO END*/
+
+/*NAVBAR*/
+
+@keyframes hideshow {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#full-navbar{
+	height: 60px;
+	border:0 0 3px 0 solid white;
+	background-image: url("/img/concrete_seamless.png");
+	background-repeat: repeat;
+}
+
+#custom-navbar{	
+	padding-top:5px;
+	padding-bottom:5px;
+	border-radius:5px;
+}
+
+#custom-navbar>.navbar-header>.navbar-brand{ 
+  background-image: url("/img/mini-logo.svg");
+   -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    margin-left:15px;
+	height: 50px;
+	width:90px;;
+}
+
+#myNavbar{
+	background: url("/img/concrete_seamless.png")repeat right top;
+}
+
+#navbar-box{
+	font-family:"RalewayHeavy";
+	margin-top: 10px;
+	text-align: center;
+
+}
+
+#navbar-box>a{
+	font-size: 1.4em;
+	padding:5px;
+	border-radius:7px;
+	background-color: rgba(255,255,255,0.0);
+	color:#f07746;
+}
+
+#navbar-box>a:hover{
+background-color: rgba(0,0,0,0.1);
+}
+
+#navbar-box>a:active{
+background-color: rgba(0,0,0,0.1);
+}
+/*NAVBAR END*/
+
+/*CONTENT*/
+.logo{
+	text-align: center;
+}
+
+
+
+#content-wrap{
+
+	padding-top: 100px;
+	padding-bottom: 50px;
+
+}
+
+#content{
+	border:3px solid white;
+	background: url("/img/concrete_seamless.png") repeat right top;
+	min-height: 700px;
+	border-radius:5px;
+	animation:hideshow 2s;
+	padding: 2.5em;
+	font-family: "RalewayBold" 2em;
+	color:#f07746;
+	& #welcome{
+	font-family: "MarketingScript";
+	font-size: 3.5em;
+	color: #f18458;
+	& h3{
+	font-family: "RalewayBold";
+	text-align: center;
+	}
+	& i{
+	color:#f9c8b5;
+	font-size: 1em;
+	}
+	}
+	}
+/*CONTENT END*/
+
+/*FOOTER*/
+
+#footer{
+	border:3px solid white;
+	background-image: url("/img/concrete_seamless.png");
+	background-repeat: repeat;
+	font-family: "RalewayBold";
+	color:#f07746;
+	background-color: rgba(255, 255, 255,0.8);
+	padding:0px 40px 0px 40px;
+	border-radius:5px;
+
+}
+.cd-top{
+	opacity: 0;
+	color: #f07746;
+	position: fixed;
+  	bottom: 10px;
+  	right: 6px;
+	&:hover{
+	color: #f07746;
+	}
+	&:focus{
+	color: #f07746;
+	}
+	&:visited{
+	color: #f07746;
+	}
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+
+/*FOOTER END*/

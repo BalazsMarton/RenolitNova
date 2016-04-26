@@ -2,25 +2,20 @@
 <html>
 <head>
   <title>RenolitNova</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div>
-<% if current_admin %> 
-  <ul> 
-    <li><%= current_admin.email %></li> 
-    <li><%= link_to "Log out", logout_path, method: "delete" %></li> 
-  </ul> 
-<% else %> 
-  <ul> 
-    <li><%= link_to "Login", 'login' %></a></li> 
-  </ul> 
-<% end %>
-</div>
+
+<%= render "layouts/navbar" %>
 
 <%= yield %>
+
+<%= render "layouts/footer" %>
+
+<a href="#0" class="cd-top"><i class="fa fa-chevron-circle-up fa-4x"></i></a>
 
 </body>
 </html>

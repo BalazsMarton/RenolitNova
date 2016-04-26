@@ -6,6 +6,11 @@ gem 'rails', '4.2.6'
 
 gem 'pg'
 
+gem 'font-awesome-sass'
+gem 'jquery-turbolinks'
+gem 'autoprefixer-rails'
+gem 'bootstrap-sass', '~> 3.3.6'
+
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 
