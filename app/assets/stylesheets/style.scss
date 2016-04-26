@@ -193,6 +193,9 @@ background-color: rgba(0,0,0,0.1);
 	padding: 2.5em;
 	font-family: "OpenSans-CondBold" 1.4em;
 	color:#f07746;
+	& hr{
+		border-top:1px solid white;
+	}
 	& #welcome{
 	font-family: "OpenSans-CondBold";
 	font-size: 2.5em;
@@ -265,4 +268,18 @@ html.turbolinks-progress-bar::before {
 #caption{
 	background-color: rgba(0,0,0,0.6);
 	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#gallery{
+	padding:15px;
+
+	#lightGallery{
+			padding-left: 0;
+		li{
+			padding-top: 15px;
+			list-style-type:none;
+		}
+	}
 }

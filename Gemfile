@@ -6,6 +6,7 @@ gem 'rails', '4.2.6'
 
 gem 'pg'
 
+gem 'light_gallery_rails', git: 'https://github.com/stNicolaas/light-gallery-rails.git'
 gem 'font-awesome-sass'
 gem 'jquery-turbolinks'
 gem 'autoprefixer-rails'

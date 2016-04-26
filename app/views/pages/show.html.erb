@@ -1,36 +1,31 @@
 <div class="container" id="content-wrap">
 <div  id="content">
-
 <div class="show-cover" style="background-image:url(<%= @houses.image.url %>);">
-<p>
+
 	<div class="row" id="caption">
 	<div class="col-xs-12 col-sm-2">
 		
-<p>
   <%= image_tag @houses.image.thumb.url %>
-</p>
 	</div>
 	<div class="col-xs-12 col-sm-10">
   <strong>Name:</strong>
   <%= @houses.name %>
-</p>
-
-<p>
+  <br>
   <strong>Description:</strong>
   <%= @houses.description %>
-</p>
 </div>
 
 </div>
 </div>
-
-<p>
-
-	<strong>Gallery:</strong><br>
+<hr>
+	<div id="gallery">
+	<ul class="row" id="lightGallery">
 	<% @houses.gallery.each do |p| %>
-  <%= image_tag p.cover.url %>
+	<li class="col-sm-4" data-src="<%= p.url %>">
+  <%= image_tag p.cover.url, :class => "img-responsive" %>
+  </li>
 <% end %>
-</p>
-
+</ul>
+</div>
 </div>
 </div>

@@ -26,3 +26,7 @@ jQuery(document).ready(function($){
 	});
 
 });
+
+$(document).ready(function() {
+    $("#lightGallery").lightGallery(); 
+  });
