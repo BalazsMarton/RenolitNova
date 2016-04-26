@@ -67,26 +67,21 @@ to { -o-transform: scale(1.5); }
 	text-shadow: 20px 20px 40px #000000;
 }
 
-#opening-button{
-	border-radius:50%;
-	padding:0.5em 0.2em 0.5em 0.2em;
+.page-scroll{
+
 	color: #f07746;
-	font-family: "MarketingScript";
-	font-size:3.5em;
-	background-color: rgba(0,0,0,0.0);
-	border: 2px solid #f07746;
-	margin-top: 3vh;
-	margin-left:auto;
-	margin-right:auto;
+	text-align:center;
 	display:block;
-	transition: all 0.7s ease 0s;
-	& a{
-	color: #f07746;
-	text-decoration: none;
-	}
+
 	&:hover{
-	box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
-	background-color: rgba(255,255,255,0.8);
+	color: #f07746;
+	top: -15px;
+	}
+	&:focus{
+	color: #f07746;
+	}
+	&:visited{
+	color: #f07746;
 	}
 }
 /*ZOOMGROUND LOGO END*/

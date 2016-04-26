@@ -1,0 +1,27 @@
+<div class="container" id="content-wrap">
+<div  id="content">
+
+<p>
+  <strong>Name:</strong>
+  <%= @houses.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @houses.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @houses.image.thumb.url %>
+</p>
+
+<p>
+	<strong>Gallery:</strong>
+	<% @houses.gallery.each do |p| %>
+  <%= image_tag p.url %>
+<% end %>
+</p>
+
+</div>
+</div>

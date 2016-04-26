@@ -18,7 +18,7 @@
         <td><%= image_tag house.image.thumb.url %></td>
         <td><%= house.name %></td>
         <td><%= house.description %></td>
-        <td><%= link_to 'Show', show_path %></td>
+        <td><%= link_to 'Show', show_house_path(house) %></td>
       </tr>
     <% end %>
   </tbody>

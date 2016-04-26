@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   get '/index' => 'pages#index'
   get '/about' => 'pages#about'
-  get '/reference' => 'pages#reference'
-  get '/show' =>  'pages#show'
+  get '/references' => 'pages#reference'
+  get '/show/:id', to:  'pages#show', as: 'show_house'
   root 'pages#index'
 
   get "/admin" => 'houses#index'

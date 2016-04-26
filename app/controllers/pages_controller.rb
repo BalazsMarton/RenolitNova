@@ -12,7 +12,7 @@ class PagesController < ApplicationController
 	end
 
   	def show
-
+  		@houses = House.find(params[:id])
   	end
 
 end
