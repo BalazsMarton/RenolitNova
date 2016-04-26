@@ -1,4 +1,6 @@
 class HousesController < ApplicationController
+  
+  before_action :require_admin
   before_action :set_house, only: [:show, :edit, :update, :destroy]
 
   # GET /houses
