@@ -223,3 +223,9 @@ background-color: rgba(0,0,0,0.1);
 }
 
 /*FOOTER END*/
+
+
+html.turbolinks-progress-bar::before {
+  background-color: #f07746 !important;
+  height: 5px !important;
+}
