@@ -89,25 +89,27 @@ to { -o-transform: scale(1.5); }
 }
 .zoomground-logo{
 	color:white;
-	text-align: center;
 	text-shadow: 20px 20px 40px #000000;
 }
 
-.page-scroll{
+#jump-down-button{
+	position: absolute;
+	width:100%;
+	bottom:5%;
+	text-align: center;
+	
+	.page-scroll{
+		color:white;
+		transition-duration:0.5s;
+		&:hover{
+		color: #f07746;
+		}
+		&:focus{
+		color: #f07746;
+		}
+		&:visited{
 
-	color: #f07746;
-	text-align:center;
-	display:block;
-
-	&:hover{
-	color: #f07746;
-	top: -15px;
-	}
-	&:focus{
-	color: #f07746;
-	}
-	&:visited{
-	color: #f07746;
+		}
 	}
 }
 /*ZOOMGROUND LOGO END*/
@@ -196,21 +198,38 @@ background-color: rgba(0,0,0,0.1);
 	& hr{
 		border-top:1px solid white;
 	}
-	& #welcome{
-	font-family: "OpenSans-CondBold";
-	font-size: 2.5em;
-	color: #f18458;
-	& h3{
-	font-family: "OpenSans-CondBold";
-	text-align: center;
-	}
-	& i{
-	color:#f9c8b5;
-	font-size: 1em;
-	}
+	& #quote-block{
+		border:3px solid rgba(0,0,0,0.1);
+		background-color:rgba(255,255,255,0.4);
+		border-radius:25px 5px 5px 25px;
+		
+		& i{
+			margin-top: 10px;
+			color:#f18458;
+			font-size: 2.5em;
+			}
+		& #welcome{
+		border-radius:5px;
+		border-left: 3px solid rgba(0,0,0,0.2);
+		font-family: "OpenSans-CondBold";
+		font-size: 2em;
+		color: #f18458;
+		}
 	}
 	}
 /*CONTENT END*/
+
+/*REFERENCIÁK*/
+	ul#reference-list{
+			padding-left: 0;
+		li{
+			padding-top: 15px;
+			list-style-type:none;
+			img{
+				border-radius:5px;
+			}
+		}
+	}
 
 /*FOOTER*/
 
@@ -270,6 +289,9 @@ html.turbolinks-progress-bar::before {
 	margin: 0;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	div{
+		
+	}
 }
 
 #gallery{
@@ -278,8 +300,12 @@ html.turbolinks-progress-bar::before {
 	#lightGallery{
 			padding-left: 0;
 		li{
+			
 			padding-top: 15px;
 			list-style-type:none;
+			img{
+				cursor:pointer;
+			}
 		}
 	}
 }

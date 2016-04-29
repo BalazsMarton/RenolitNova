@@ -8,10 +8,8 @@
   <%= image_tag @houses.image.thumb.url %>
 	</div>
 	<div class="col-xs-12 col-sm-10">
-  <strong>Name:</strong>
-  <%= @houses.name %>
+  <strong><%= @houses.name %></strong>
   <br>
-  <strong>Description:</strong>
   <%= @houses.description %>
 </div>
 
@@ -22,7 +20,7 @@
 	<ul class="row" id="lightGallery">
 	<% @houses.gallery.each do |p| %>
 	<li class="col-sm-4" data-src="<%= p.url %>">
-  <%= image_tag p.cover.url, :class => "img-responsive" %>
+  <%= image_tag p.cover.url, class: "img-responsive" %>
   </li>
 <% end %>
 </ul>
