@@ -51,68 +51,63 @@ to { -o-transform: scale(1.5); }
 }
 
 .zoomground-wrap {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
     position: relative;
 
-    /*custom border bottom*/
-     border-bottom: 1px dashed #ddd;
-}
 
-.zoomground {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    -webkit-animation: cssAnimation 20s ease;
-	-moz-animation: cssAnimation 20s ease;
-	-o-animation: cssAnimation 20s ease;
-	-webkit-animation-fill-mode: forwards;
-    background-image: url("/img/bg.jpg");
-    -webkit-filter: blur(5px); -moz-filter: blur(5px); -o-filter: blur(5px); -ms-filter: blur(5px); filter: blur(5px);
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    z-index: -1;
-}
-/*ZOOMGROUND END*/
+	.zoomground {
+	    position: absolute;
+	    height: 100%;
+	    width: 100%;
+	    -webkit-animation: cssAnimation 20s ease;
+		-moz-animation: cssAnimation 20s ease;
+		-o-animation: cssAnimation 20s ease;
+		-webkit-animation-fill-mode: forwards;
+	    background-image: url("/img/bg.jpg");
+	    -webkit-filter: blur(5px); 
+	    -moz-filter: blur(5px); 
+	    -o-filter: blur(5px); 
+	    -ms-filter: blur(5px); 
+	    filter: blur(5px);
+	    -moz-background-size: cover;
+	    -webkit-background-size: cover;
+	    background-size: cover;
+	    z-index: -1;
+	}
 
-/*ZOOMGROUND LOGO*/
+	.zoomground-logo-wrap{
+	background-image: url("/img/renolit-opening-logo.svg");
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:100vw;
+    height: 100vh;
+	}
 
-.zoomground-logo-wrap{
-	margin-top: 20vh;
-	margin-bottom: 25vh;
-	margin-left: 25vw;
-	margin-right: 25vw;
-	max-height: 600px;
-	max-width: 1050px;
-}
-.zoomground-logo{
-	color:white;
-	text-shadow: 20px 20px 40px #000000;
-}
-
-#jump-down-button{
-	position: absolute;
-	width:100%;
-	bottom:5%;
-	text-align: center;
-	
-	.page-scroll{
-		color:white;
-		transition-duration:0.5s;
-		&:hover{
-		color: #f07746;
-		}
-		&:focus{
-		color: #f07746;
-		}
-		&:visited{
-
+	#jump-down-button{
+		position: absolute;
+		width:100%;
+		bottom:3%;
+		text-align: center;
+		.page-scroll{
+			text-decoration: none;
+			color:white;
+			transition-duration:0.5s;
+			&:hover{
+			color: #f07746;
+			}
+			&:focus{
+			color: #f07746;
+			}
+			&:visited{
+			}
 		}
 	}
+
 }
-/*ZOOMGROUND LOGO END*/
+/*ZOOMGROUND END*/
 
 /*NAVBAR*/
 
@@ -123,102 +118,116 @@ to { -o-transform: scale(1.5); }
 
 #full-navbar{
 	height: 60px;
-	border:0 0 3px 0 solid white;
+	border-bottom:1px solid white;
 	background-image: url("/img/concrete_seamless.png");
 	background-repeat: repeat;
-}
+	
+	.in{
+	ul>li{
 
-#custom-navbar{	
-	padding-top:5px;
-	padding-bottom:5px;
-	border-radius:5px;
-}
+	}
 
-#custom-navbar>.navbar-header>.navbar-brand{ 
-  background-image: url("/img/mini-logo.svg");
-   -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    margin-left:15px;
-	height: 50px;
-	width:90px;;
-}
+	}
+	#custom-navbar{	
+		padding-top:5px;
+		padding-bottom:5px;
 
-#myNavbar{
-	background: url("/img/concrete_seamless.png")repeat right top;
-}
+		.navbar-header{
 
-#navbar-box{
-	font-family:"OpenSans-CondBold";
-	margin-top: 10px;
-	text-align: center;
+			.navbar-brand{ 
+		  	background-image: url("/img/mini-logo.svg");
+		    -moz-background-size: cover;
+		    -webkit-background-size: cover;
+		    background-size: cover;
+		    margin-left:15px;
+			height: 50px;
+			width:90px;;
+			}
+			button{
+				border-radius: 0px;
+				border:2px solid #f07746;
+				.icon-bar{
+					background-color:#f07746;
+				}
+				&:hover{
+					background-color: white;	
+				}
+				&:focus{
+					background-color: white;
+				}
+			}
+		}
+		#myNavbar{
+			border-bottom: 2px solid white;
+			background: url("/img/concrete_seamless.png")repeat right top;
+			ul>#navbar-box{
+			font-family:"OpenSans-CondBold";
+			margin-top: 10px;
+				a{
+				font-size: 1.4em;
+				padding:5px;
+				padding-left: 15px;
+				color:#f07746;
+					&:hover{
+						color: #FF4A00;
+					}
+					&:active{
+						color: #FF4A00;
+					}
+				}
 
-}
+			}
+		}
 
-#navbar-box>a{
-	font-size: 1.4em;
-	padding:5px;
-	border-radius:7px;
-	background-color: rgba(255,255,255,0.0);
-	color:#f07746;
-}
+	}
 
-#navbar-box>a:hover{
-background-color: rgba(0,0,0,0.1);
-}
-
-#navbar-box>a:active{
-background-color: rgba(0,0,0,0.1);
 }
 /*NAVBAR END*/
 
 /*CONTENT*/
-.logo{
-	text-align: center;
-}
-
-
 
 #content-wrap{
 
 	padding-top: 100px;
 	padding-bottom: 50px;
 
-}
-
-#content{
-	border:3px solid white;
-	background: url("/img/concrete_seamless.png") repeat right top;
-	min-height: 700px;
-	border-radius:5px;
-	animation:hideshow 2s;
-	padding: 2.5em;
-	font-family: "OpenSans-CondBold" 1.4em;
-	color:#f07746;
-	& hr{
-		border-top:1px solid white;
-	}
-	& #quote-block{
-		
-		& i{
-			margin-top: 10px;
-			color:#f18458;
-			font-size: 2.5em;
-			}
-		& #welcome{
+	#content{
+		border:3px solid white;
+		background: url("/img/concrete_seamless.png") repeat right top;
+		min-height: 700px;
 		border-radius:5px;
-		border-left: 3px solid rgba(0,0,0,0.2);
-		font-family: "OpenSans-CondBold";
-		font-size: 2em;
-		color: #f18458;
+		animation:hideshow 2s;
+		padding: 2.5em;
+		font-family: "OpenSans-CondBold" 1.4em;
+		color:#f07746;
+		hr{
+			border-top:1px solid white; 
+		}
+		#quote-block{
+			
+			& i{
+				margin-top: 10px;
+				color:#f18458;
+				font-size: 2.5em;
+				}
+			& #welcome{
+				border-radius:5px;
+				border-left: 3px solid rgba(0,0,0,0.2);
+				font-family: "OpenSans-CondBold";
+				font-size: 2em;
+				color: #f18458;
+			}
 		}
 	}
-	}
+}
+
+
 /*CONTENT END*/
 
 /*REFERENCIÁK*/
+
 	ul#reference-list{
-			padding-left: 0;
+		padding-left: 0;
 		li{
 			padding-top: 15px;
 			list-style-type:none;
@@ -227,6 +236,36 @@ background-color: rgba(0,0,0,0.1);
 			}
 		}
 	}
+
+	.show-cover{
+		background-position: center center;
+		background-size: cover;
+		height:300px;
+	}
+
+	#caption{
+		color:rgba(255,255,255,0.9);
+		background-color: rgba(0,0,0,0.6);
+		margin: 0;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+#gallery{
+	padding:15px;
+
+	#lightGallery{
+			padding-left: 0;
+		li{
+			
+			padding-top: 15px;
+			list-style-type:none;
+			img{
+				cursor:pointer;
+			}
+		}
+	}
+}
 
 /*FOOTER*/
 
@@ -352,34 +391,6 @@ html.turbolinks-progress-bar::before {
 	height: 5px !important;
 }
 
-.show-cover{
-	background-position: center center;
-	background-size: cover;
-	height:300px;
-}
 
-#caption{
-	background-color: rgba(0,0,0,0.6);
-	margin: 0;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	div{
-		
-	}
-}
 
-#gallery{
-	padding:15px;
-
-	#lightGallery{
-			padding-left: 0;
-		li{
-			
-			padding-top: 15px;
-			list-style-type:none;
-			img{
-				cursor:pointer;
-			}
-		}
-	}
-}
+/*proba*/
