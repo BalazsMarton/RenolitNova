@@ -8,10 +8,8 @@
 <%= link_to '', edit_house_path(@house), class: 'pull-right fa fa-pencil-square-o fa-2x a-edit-big' %>
 </div>
 </div>
-<div class="col-sm-3">
-<p>
+<div class="col-sm-3 a-show-thumb">
  <%= image_tag @house.image.thumb.url %>
-</p>
 </div>
 <div class="col-sm-9">
 <p>
@@ -23,15 +21,13 @@
   <strong>Leírás:</strong>
   <%= @house.description %>
 </p>
-
-
-
 <p>
 	<strong>Galéria:</strong><br>
 	<% @house.gallery.each do |p| %>
   <%= image_tag p.thumb.url %>
 <% end %>
 </p>
+
 </div>
 </div>
 </div>
