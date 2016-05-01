@@ -1,10 +1,12 @@
 <div class="container" id="content-wrap">
 <div  id="content">
 <%= render "houses/admin_widget" %>
+<div class="row">
+	<div class="col-sm-12">
+		<%= link_to '', houses_path, class: 'pull-left fa fa-arrow-circle-o-left fa-2x a-back-big' %>
+	</div>
+</div>
 <h1>New House</h1>
-
 <%= render 'form' %>
-
-<%= link_to 'Back', houses_path %>
 </div>
 </div>

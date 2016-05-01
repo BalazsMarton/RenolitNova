@@ -3,33 +3,43 @@
 <%= render "houses/admin_widget" %>
 <p id="notice"><%= notice %></p>
 <h1>Listing Houses</h1>
-
+<br>
+<%= link_to 'Új épület hozzáadása', new_house_path %>
+<div class="table-responsive">
 <table class="table table-hover">
   <thead>
     <tr>
+    <th colspan="1"></th>
+    <th>Image</th>
       <th>Name</th>
+      
       <th>Description</th>
-      <th>Image</th>
-      <th colspan="3"></th>
+      
+      
     </tr>
   </thead>
 
   <tbody>
     <% @houses.each do |house| %>
       <tr>
+      <td>
+        <%= link_to '', house, class: 'fa fa-eye fa-lg a-show-small' %>
+        <%= link_to '', edit_house_path(house), class: 'fa fa-pencil-square-o fa-lg a-edit-small' %>
+        <%= link_to '', house, method: :delete, data: { confirm: 'Are you sure?' }, class: 'fa fa-trash fa-lg a-del-small' %>
+        </td>
+        <td  data-toggle="tooltip" data-placement="right" title="<%= house.image %>"><%= image_tag house.image.thumb.url %></td>
         <td><%= house.name %></td>
+        
         <td><%= house.description %></td>
-        <td><%= house.image %></br><%= image_tag house.image.thumb.url %></td>
-        <td><%= link_to 'Show', house %></td>
-        <td><%= link_to 'Edit', edit_house_path(house) %></td>
-        <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        
+       
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
 
-<br>
 
-<%= link_to 'New House', new_house_path %>
 </div>
 </div>

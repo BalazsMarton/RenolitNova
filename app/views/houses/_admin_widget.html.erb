@@ -1,12 +1,18 @@
 <div id="admin-widget">
 <% if current_admin %> 
-  <ul> 
-    <li><%= current_admin.email %></li> 
-    <li><%= link_to "Log out", logout_path, method: "delete" %></li> 
-  </ul> 
+<div class="row">
+<div class="col-sm-12">
+<p class="pull-left">Bejelentkezve mint: <%= current_admin.email %>
+</p>
+<p class="pull-right ">
+<%= link_to "", logout_path, method: "delete", class: 'fa fa-sign-out fa-2x a-logout-big' %>
+</p>
 <% else %> 
   <ul> 
-    <li><%= link_to "Login", 'login' %></a></li> 
+    <li><%= link_to "Login", 'login' %></li> 
   </ul> 
 <% end %>
 </div>
+</div>
+</div>
+<hr>

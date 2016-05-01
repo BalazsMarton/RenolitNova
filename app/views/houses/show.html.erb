@@ -2,30 +2,36 @@
 <div  id="content">
 <%= render "houses/admin_widget" %>
 <p id="notice"><%= notice %></p>
-
+<div class="row">
+<div class="col-sm-12">
+<%= link_to '', houses_path, class: 'pull-left fa fa-arrow-circle-o-left fa-2x a-back-big'%>
+<%= link_to '', edit_house_path(@house), class: 'pull-right fa fa-pencil-square-o fa-2x a-edit-big' %>
+</div>
+</div>
+<div class="col-sm-3">
 <p>
-  <strong>Name:</strong>
+ <%= image_tag @house.image.thumb.url %>
+</p>
+</div>
+<div class="col-sm-9">
+<p>
+  <strong>Név:</strong>
   <%= @house.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Leírás:</strong>
   <%= @house.description %>
 </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @house.image.thumb.url %>
-</p>
+
 
 <p>
-	<strong>Gallery:</strong><br>
+	<strong>Galéria:</strong><br>
 	<% @house.gallery.each do |p| %>
   <%= image_tag p.thumb.url %>
 <% end %>
 </p>
-
-<%= link_to 'Edit', edit_house_path(@house) %> |
-<%= link_to 'Back', houses_path %>
+</div>
 </div>
 </div>
