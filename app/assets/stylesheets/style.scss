@@ -23,13 +23,21 @@ font-stretch: $font-stretch;
 ::-webkit-scrollbar { 
     display: none; 
 }
+
+$rn-orange: #f07746;
+
+html.turbolinks-progress-bar::before {
+	background-color: $rn-orange !important;
+	height: 5px !important;
+}
+
 /*PRE-END*/
 
 /*BODY*/
 body{
-background-image: url("/img/swirl_pattern.png");
-background-repeat: repeat;
-overflow-x:hidden;
+	background-image: url("/img/swirl_pattern.png");
+	background-repeat: repeat;
+	overflow-x:hidden;
 }
 /*BODY END*/
 
@@ -96,10 +104,10 @@ to { -o-transform: scale(1.5); }
 			color:white;
 			transition-duration:0.5s;
 			&:hover{
-			color: #f07746;
+			color: $rn-orange;
 			}
 			&:focus{
-			color: #f07746;
+			color: $rn-orange;
 			}
 			&:visited{
 			}
@@ -111,62 +119,51 @@ to { -o-transform: scale(1.5); }
 
 /*NAVBAR*/
 
-@keyframes hideshow {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
 #full-navbar{
-	height: 60px;
-	border-bottom:1px solid white;
+	font-family:"OpenSans-CondBold";
+	border-bottom:2px solid $rn-orange;
 	background-image: url("/img/concrete_seamless.png");
 	background-repeat: repeat;
 	
-	.in{
-	ul>li{
 
-	}
 
-	}
 	#custom-navbar{	
 		padding-top:5px;
 		padding-bottom:5px;
-
-		.navbar-header{
-
-			.navbar-brand{ 
-		  	background-image: url("/img/mini-logo.svg");
-		    -moz-background-size: cover;
-		    -webkit-background-size: cover;
-		    background-size: cover;
-		    margin-left:15px;
+	
+		.navbar-brand{ 
+			background-image: url("/img/mini-logo.svg");
+			-moz-background-size: cover;
+			-webkit-background-size: cover;
+			background-size: cover;
+			margin-left:15px;
 			height: 50px;
 			width:90px;;
+		}
+
+		.navbar-toggle{
+			border-radius: 0px;
+			border:2px solid $rn-orange;
+			.icon-bar{
+				background-color:$rn-orange;
 			}
-			button{
-				border-radius: 0px;
-				border:2px solid #f07746;
-				.icon-bar{
-					background-color:#f07746;
-				}
-				&:hover{
-					background-color: white;	
-				}
-				&:focus{
-					background-color: white;
-				}
+			&:hover{
+				background-color: white;	
+			}
+			&:focus{
+				background-color: white;
 			}
 		}
+
 		#myNavbar{
 			background: url("/img/concrete_seamless.png")repeat right top;
-			ul>#navbar-box{
-			font-family:"OpenSans-CondBold";
-			margin-top: 10px;
+			ul li{
+				margin-top: 10px;
 				a{
 				font-size: 1.4em;
 				padding:5px;
 				padding-left: 15px;
-				color:#f07746;
+				color:$rn-orange;
 					&:hover{
 						color: #FF4A00;
 					}
@@ -177,13 +174,16 @@ to { -o-transform: scale(1.5); }
 
 			}
 		}
-
 	}
-
 }
 /*NAVBAR END*/
 
 /*CONTENT*/
+
+@keyframes hideshow {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
 #content-wrap{
 
@@ -198,7 +198,7 @@ to { -o-transform: scale(1.5); }
 		animation:hideshow 2s;
 		padding: 2.5em;
 		font-family: "OpenSans-CondBold" 1.4em;
-		color:#f07746;
+		color:$rn-orange;
 		hr{
 			border-top:1px solid white; 
 		}
@@ -225,30 +225,30 @@ to { -o-transform: scale(1.5); }
 
 /*REFERENCIÁK*/
 
-	ul#reference-list{
-		padding-left: 0;
-		li{
-			padding-top: 15px;
-			list-style-type:none;
-			img{
-				border-radius:5px;
-			}
+ul#reference-list{
+	padding-left: 0;
+	li{
+		padding-top: 15px;
+		list-style-type:none;
+		img{
+			border-radius:5px;
 		}
 	}
+}
 
-	.show-cover{
-		background-position: center center;
-		background-size: cover;
-		height:300px;
-	}
+.show-cover{
+	background-position: center center;
+	background-size: cover;
+	height:300px;
+}
 
-	#caption{
-		color:rgba(255,255,255,0.9);
-		background-color: rgba(0,0,0,0.6);
-		margin: 0;
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
+#caption{
+	color:rgba(255,255,255,0.9);
+	background-color: rgba(0,0,0,0.6);
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
 
 #gallery{
 	padding:15px;
@@ -273,7 +273,7 @@ to { -o-transform: scale(1.5); }
 	background-image: url("/img/concrete_seamless.png");
 	background-repeat: repeat;
 	font-family: "OpenSans-CondBold";
-	color:#f07746;
+	color:$rn-orange;
 	background-color: rgba(255, 255, 255,0.8);
 	padding:0px 40px 0px 40px;
 	border-radius:5px;
@@ -281,100 +281,68 @@ to { -o-transform: scale(1.5); }
 }
 .cd-top{
 	opacity: 0;
-	color: #f07746;
+	color: $rn-orange;
 	position: fixed;
   	bottom: 10px;
   	right: 6px;
 	&:hover{
-	color: #f07746;
+		color: $rn-orange;
 	}
 	&:focus{
-	color: #f07746;
+		color: $rn-orange;
 	}
 	&:visited{
-	color: #f07746;
+		color: $rn-orange;
 	}
 }
-.cd-top.cd-is-visible {
-  /* the button becomes visible */
-  visibility: visible;
-  opacity: 1;
+
+.cd-is-visible {
+	/* the button becomes visible */
+	visibility: visible;
+	opacity: 1;
 }
-.cd-top.cd-fade-out {
-  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
-  opacity: .5;
+.cd-fade-out {
+	 /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+	opacity: .5;
 }
+
 
 /*FOOTER END*/
 
 /*ADMIN*/
-.a-show-small{
 
-color:#B4B4B4;
-transition:0.5s;
+@mixin admin-icon($hover-color, $color : #B4B4B4, $transition : 0.5s, $text-decoration : none) {
+	color:$color;
+	transition:$transition;
 	&:hover{
-		text-decoration: none;
-		color:#337AB7;
+		text-decoration:$text-decoration;
+		color: $hover-color;
 	}
+}
+.a-show-small{
+@include admin-icon(#337AB7);
 }
 .a-edit-small{
-
-color:#B4B4B4;
-transition:0.5s;
-	&:hover{
-		text-decoration: none;
-		color:#1FA67A;
-	}
+@include admin-icon(#1FA67A);
 }
 .a-del-small{
-
-color:#B4B4B4;
-transition:0.5s;
-	&:hover{
-		text-decoration: none;
-		color:#A61F1F
-	}
+@include admin-icon(#A61F1F);
 }
-
 .a-show-big{
-
-color:#B4B4B4;
-transition:0.5s;
-	&:hover{
-		text-decoration: none;
-		color:#337AB7;
-	}
+@include admin-icon(#337AB7);
 }
 .a-edit-big{
-
-color:#B4B4B4;
-transition:0.5s;
-	&:hover{
-		text-decoration: none;
-		color:#1FA67A;
-	}
+@include admin-icon(#1FA67A);
 }
 .a-back-big{
-
-color:#B4B4B4;
-transition:0.5s;
-	&:hover{
-		text-decoration: none;
-		color:#f07746
-	}
+@include admin-icon($rn-orange);
 }
-
 .a-logout-big{
-	color:#B4B4B4;
-	transition:0.5s;
-	&:hover{
-		text-decoration: none;
-		color:#A61F1F
-	}
+@include admin-icon(#A61F1F);
 }
 
 .a-info{
-	border:1px solid #f07746;
+	border:1px solid $rn-orange;
 	padding: 10px;
 	background-color: rgba(255,255,255,0.5);
 }
@@ -382,13 +350,9 @@ transition:0.5s;
 .a-show-thumb{
 	padding-top: 10px;
 }
+
 /*ADMIN END*/
 
-
-html.turbolinks-progress-bar::before {
-	background-color: #f07746 !important;
-	height: 5px !important;
-}
 
 
 
