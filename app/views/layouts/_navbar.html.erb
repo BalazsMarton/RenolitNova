@@ -10,9 +10,9 @@
        </div>
 	<div class="collapse navbar-collapse navbar-right" id="myNavbar">
 	<ul class="nav navbar-nav">
-	<li  id="navbar-box"><%= link_to 'Főoldal', root_path %></li>
-	<li  id="navbar-box"><%= link_to 'Rólunk', about_path %></li>
-	<li  id="navbar-box"><%= link_to 'Referencia', references_path %></li>
+	<li class="<%= 'active' if current_page?(root_path) %>"  id="navbar-box"><%= link_to 'Főoldal', root_path %></li>
+	<li class="<%= 'active' if current_page?(about_path) %>"  id="navbar-box"><%= link_to 'Rólunk', about_path %></li>
+	<li class="<%= 'active' if current_page?(references_path) %>"  id="navbar-box"><%= link_to 'Referencia', references_path %></li>
 	</div>
 </div>
 </nav>

@@ -24,7 +24,7 @@ font-stretch: $font-stretch;
     display: none; 
 }
 
-$rn-orange: #f07746;
+$rn-orange: /*#00C2B2*/ #f28231 /*#f07746*/;
 
 html.turbolinks-progress-bar::before {
 	background-color: $rn-orange !important;
@@ -35,9 +35,10 @@ html.turbolinks-progress-bar::before {
 
 /*BODY*/
 body{
-	background-image: url("/img/swirl_pattern.png");
+	background-image: url("/img/fond-produits.png");
 	background-repeat: repeat;
 	overflow-x:hidden;
+	color: $rn-orange;
 }
 /*BODY END*/
 
@@ -120,9 +121,10 @@ to { -o-transform: scale(1.5); }
 /*NAVBAR*/
 
 #full-navbar{
+	text-shadow:3px 3px 0px #fff;
 	font-family:"OpenSans-CondBold";
 	border-bottom:2px solid $rn-orange;
-	background-image: url("/img/concrete_seamless.png");
+	background-image: url("/img/fond-deroulant.png");
 	background-repeat: repeat;
 	
 
@@ -156,19 +158,19 @@ to { -o-transform: scale(1.5); }
 		}
 
 		#myNavbar{
-			background: url("/img/concrete_seamless.png")repeat right top;
-			ul li{
+			background: url("/img/fond-deroulant.png")repeat right top;
+			ul #navbar-box{
 				margin-top: 10px;
 				a{
-				font-size: 1.4em;
+				font-size: 1.6em;
 				padding:5px;
 				padding-left: 15px;
 				color:$rn-orange;
 					&:hover{
-						color: #FF4A00;
+						color: #00C2B2;
 					}
 					&:active{
-						color: #FF4A00;
+						color: #00C2B2;
 					}
 				}
 
@@ -191,22 +193,30 @@ to { -o-transform: scale(1.5); }
 	padding-bottom: 50px;
 
 	#content{
-		border:3px solid white;
-		background: url("/img/concrete_seamless.png") repeat right top;
+		border:1px solid white;
+		box-shadow:3px 3px 0px white;
+		background: url("/img/fond-deroulant.png") repeat right top;
 		min-height: 700px;
 		border-radius:5px;
-		animation:hideshow 2s;
+		animation:hideshow 1.5s;
 		padding: 2.5em;
 		font-family: "OpenSans-CondBold" 1.4em;
 		color:$rn-orange;
+		h1{
+			text-shadow:3px 3px 0px #fff;
+		}
+		p{
+			font-size: 1.2em;
+			text-shadow: none;
+		}
 		hr{
 			border-top:1px solid white; 
 		}
 		#quote-block{
-			
+			text-shadow:3px 3px 0px #fff;
 			& i{
 				margin-top: 10px;
-				color:#f18458;
+				color:$rn-orange;
 				font-size: 2.5em;
 				}
 			& #welcome{
@@ -214,7 +224,8 @@ to { -o-transform: scale(1.5); }
 				border-left: 3px solid rgba(0,0,0,0.2);
 				font-family: "OpenSans-CondBold";
 				font-size: 2em;
-				color: #f18458;
+				text-shadow: 3px 3px 0px #fff;
+				color: $rn-orange;
 			}
 		}
 	}
@@ -243,6 +254,9 @@ ul#reference-list{
 }
 
 #caption{
+	max-height:300px;
+	overflow: hidden;
+	text-shadow: none;
 	color:rgba(255,255,255,0.9);
 	background-color: rgba(0,0,0,0.6);
 	margin: 0;
@@ -267,17 +281,20 @@ ul#reference-list{
 }
 
 /*FOOTER*/
-
-#footer{
-	border:3px solid white;
-	background-image: url("/img/concrete_seamless.png");
+footer{
+	background-image: url("/img/fond.png");
 	background-repeat: repeat;
 	font-family: "OpenSans-CondBold";
-	color:$rn-orange;
-	background-color: rgba(255, 255, 255,0.8);
-	padding:0px 40px 0px 40px;
-	border-radius:5px;
-
+	color: #ded4bf;
+	h3{
+		text-shadow: 3px 3px 0px #666666;
+	}
+	p{
+		font-size: 1.2em
+	}
+}
+#footer{
+	padding:40px 40px 40px 40px;
 }
 .cd-top{
 	opacity: 0;
