@@ -35,7 +35,7 @@ html.turbolinks-progress-bar::before {
 
 /*BODY*/
 body{
-	background-image: url("/img/fond-produits.png");
+	background-image: url("/img/brickwall.png");
 	background-repeat: repeat;
 	overflow-x:hidden;
 	color: $rn-orange;
@@ -162,6 +162,7 @@ to { -o-transform: scale(1.5); }
 			ul #navbar-box{
 				margin-top: 10px;
 				a{
+				transition:0.3s;
 				font-size: 1.6em;
 				padding:5px;
 				padding-left: 15px;
@@ -220,7 +221,6 @@ to { -o-transform: scale(1.5); }
 				font-size: 2.5em;
 				}
 			& #welcome{
-				border-radius:5px;
 				border-left: 3px solid rgba(0,0,0,0.2);
 				font-family: "OpenSans-CondBold";
 				font-size: 2em;
