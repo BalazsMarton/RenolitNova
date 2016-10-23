@@ -20,7 +20,7 @@
   </div>
   <div class="form-group field col-sm-12">
     <%= f.label :description, class: 'control-label' %><br>
-    <%= f.text_area :description, class: 'form-control'  %>
+    <%= f.text_area :description, class: 'form-control', rows: '5'  %>
   </div>
  <div class="form-group field col-sm-12">
     <%= f.label :image, class: 'control-label' %><br>
@@ -31,7 +31,7 @@
     <%= f.file_field :gallery, multiple: true %>
   </div>
   <div class="col-sm-12">
-    <%= f.submit class: 'btn btn-default' %>
+    <%= f.submit class: 'btn btn-default pull-right' %>
   </div>
 <% end %>
 </div>
