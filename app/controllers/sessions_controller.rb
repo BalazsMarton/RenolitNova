@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
 	  if @admin && @admin.authenticate(params[:session][:password])
 	    session[:admin_id] = @admin.id
 	    redirect_to '/admin'
+			NotifMailer.login_notif.deliver_now
 	  else
 	    redirect_to '/login'
 	  end 
