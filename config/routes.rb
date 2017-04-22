@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get '/show/:id', to:  'pages#show', as: 'show_house'
   root 'pages#index'
 
+  get 'contact', to: 'messages#new', as: 'contact'
+  post 'contact', to: 'messages#create'
+
   get "/admin" => 'houses#index'
   resources :houses
   
