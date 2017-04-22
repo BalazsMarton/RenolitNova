@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <td id="mfrom">
+      feladó: <%= @message.name %> <span id="msender">< <%= @message.email %> ></span>
+    </td>
+  </tr>
+  <tr>
+    <td id="mmessagelabel">
+      üzenet:
+    </td>
+  </tr>
+  <tr>
+    <td id="mmessage">
+      <%= @message.content %>
+    </td>
+  </tr>
+</table>
