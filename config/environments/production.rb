@@ -76,4 +76,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  ##################
+  #action mailer root host def
+  config.action_mailer.asset_host = 'http://www.csaladihazkivitelezes.com'
+  ##################
 end
