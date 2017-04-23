@@ -6,6 +6,6 @@ class MessageMailer < ApplicationMailer
   def new_message(message)
     @message = message
 
-    mail(from: "#{message.email}", subject: "kapcsolatfelvétel: #{message.name} | csaladihazkivitelezes.com ")
+    mail(from: "#{message.name} <#{message.email}>", subject: "kapcsolatfelvétel: #{message.name} | csaladihazkivitelezes.com ")
   end
 end
