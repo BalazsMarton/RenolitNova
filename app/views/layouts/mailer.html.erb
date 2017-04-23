@@ -7,14 +7,13 @@
         background-color: #333;
       }
     #mfooter td{
+      padding-top:5px;
+      padding-bottom:5px;
       text-align:center;
       font-size: 1em;
       color:#ded4bf;
     }
-    #mcontent{
-
-    }
-      #mcontent td{
+      #mcontent{
         padding-left:10px;
         padding-right:10px;
         color:#f28231;
@@ -58,8 +57,8 @@
         <%= image_tag('mini-logo.png') %>
       </td>
     </tr>
-    <tr id="mcontent">
-      <td>
+    <tr>
+      <td id="mcontent">
         <%= yield %>
       </td>
     </tr>
