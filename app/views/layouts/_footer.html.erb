@@ -3,19 +3,29 @@
 	<div class="row" id="footer-content" >
 	<div class="col-xs-12 col-sm-4 col-md-4"><h3>Impresszum</h3><p>A portál szerkesztését és karbantartását Marton Attila végzi a www.csaladihazkivitelezes.com megbízásából.</p></div>
 	<div class="col-xs-12 col-sm-4 col-md-4"><h3>Adatvédelem</h3><p>A CsaládiházKivitelezés oldal számára kiemelt fontosságú látogatói által rendelkezésre bocsátott személyes adatok védelme, a látogatók információs önrendelkezési jogának biztosítása. Cégünk elkötelezi magát a látogatók személyes adatainak oly módon történő kezelése mellett, amely a vonatkozó hatályos jogszabályoknak teljes körűen eleget téve járul hozzá a látogatók biztonságos internetezési lehetőségeinek megteremtéséhez</p></div>
-	<div class="col-xs-12 col-sm-4 col-md-4"><h3>Kapcsolat</h3>
-	      <ul class="list-unstyled">
-                           				<li> 
-							<table>
-	<tr><td><i class="fa fa-map-marker fa-lg"></i></td><td>Marton Attila</td></tr>
-	
-	
-                        <tr><td style="padding-top:10px;"><i class="fa fa-envelope-o fa-lg"></i></td><td style="padding-top:10px;"><a href="mailto:renolit.nova@gmail.com"> renolit.nova@gmail.com</a></td></tr>
-			
-	<tr><td style="padding-top:10px;"><i class="fa fa-phone fa-lg"></i></td><td style="padding-top:10px;">+36 70 420-2156</td></tr>
-	<tr><td style="padding-top:10px;"><i class="fa fa-facebook fa-lg"></i></td><td style="padding-top:10px;"><p>kérdéseit felteheti facebookon is: </br><a href="https://www.facebook.com/csaladihazkivitelezes" target="_blank">családiház kivitelezés</a></p></td></tr>
-	</table>
-                      </li>   </ul>
+	<div class="col-xs-12 col-sm-4 col-md-4">
+      <h3>Kapcsolat</h3>
+    <%= form_for Message.new, html: { remote: true }, url: contact_path do |message_form| %>
+        <div class="row">
+          <div class="field col-sm-12">
+            <%= message_form.text_field :name, placeholder: "Név" %>
+          </div>
+
+          <div class="field col-sm-12">
+            <%= message_form.email_field :email, placeholder: "Email"%>
+          </div>
+
+          <div class="field col-sm-12">
+            <%= message_form.text_area :content, placeholder: "Üzenet"%>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field col-sm-12">
+            <%= message_form.submit "Küldés" %>
+          </div>
+        </div>
+    <% end %>
 	</div>
 	</div>
 	</div>

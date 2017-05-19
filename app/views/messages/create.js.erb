@@ -1,0 +1,12 @@
+<% if flash[:notice] %>
+$('#new_message').before('<div class="notice"><%= flash[:notice] %></div>');
+$('#errors').remove();
+$('#new_message').remove();
+<% end %>
+
+<% if @message.errors.any? %>
+$('#errors').remove();
+$('#new_message').before('<div class="errors" id="errors"><% @message.errors.each do |attr,msg| %> <%= msg %> <br> <% end %></div>');
+
+<% end %>
+
