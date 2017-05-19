@@ -44,6 +44,11 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'sendgrid-ruby'
 gem 'sendgrid-actionmailer'
 
+# def app server
+gem 'puma'
+#puma heroku gem
+gem 'puma-heroku'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
